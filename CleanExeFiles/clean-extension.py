@@ -1,5 +1,5 @@
 from path import path
-d = path("D:/NicKLz/Pictures")
+d = path("D:/NicKLz/Downloads")
 files = d.walkfiles("*.zip")
 for file in files:
     file.remove()
