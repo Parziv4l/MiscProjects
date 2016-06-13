@@ -6,7 +6,7 @@ class Main(QtWidgets.QMainWindow):
 
     def __init__(self, parent = None):
         QtWidgets.QMainWindow.__init__(self,parent)
-        self.filename = ""
+        self.filename = None
         self.initUI()
 
     def initToolbar(self):
@@ -75,7 +75,7 @@ class Main(QtWidgets.QMainWindow):
 
     def open(self):
         #Get filename and show only .txt files
-        self.filename = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', ".", "(*.writer)")
+        self.filename = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', ".", "Files (*.*)")
 
         if self.filename:
             with open(self.filename, "rt") as file:
